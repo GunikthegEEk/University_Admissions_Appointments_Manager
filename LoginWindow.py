@@ -2,9 +2,10 @@ from tkinter import *
 from pymysql import *
 import subprocess
 
+# Window
 root = Tk()
 root.title('Login Window')
-root.geometry('400x400')
+root.geometry('1366x768')
 
 #defining Login Button
 
@@ -36,29 +37,24 @@ def Login():
 
     con.close()
 
-
-
-
 #Creating Widgets for Use
-Uname = Label(root,text='Username: ')
-Pass = Label(root,text='Password: ')
-SubmitL = Button(root,text='Login',command=Login)
-
-
-UnameI = Entry(root)
-PassI = Entry(root,show="*")
+Uname = Label(root,text='Enter your Username: ', font="Helvetica 16 bold")
+Pass = Label(root,text='Enter your Password: ', font="Helvetica 16 bold")
+SubmitL = Button(root,text='Login', height="2",width="10", bd="4", highlightcolor="blue", command=Login)
+Head= Label(root, text="UNIVERSITY ADMISSION APPOINTMENT MANAGER", font="Helvetica 26 bold",  fg='black', bg='brown1')
+star= Label(root, text="*********************", font="Helvetica 26 bold",  fg='black')
+login= Label(root, text="LOGIN", font="Helvetica 20 bold",  fg='#ff9933', bg='black')
+UnameI = Entry(root, width="30")
+PassI = Entry(root, width="30", show="*")
 
 #Placing widgets in root -Window
-Uname.place(x=20,y=10)
-UnameI.place(x=100,y=10)
-
-Pass.place(x=20,y=50)
-PassI.place(x=100,y=50)
-
-SubmitL.place(x=110,y=80)
-
-
-
-
+Uname.place(x=450,y=200)
+UnameI.place(x=700,y=206)
+Pass.place(x=450,y=245)
+PassI.place(x=700,y=251)
+SubmitL.place(x=630,y=300)
+Head.place(x=260, y=10)
+star.place(x=520, y=135)
+login.place(x=630, y=70)
 
 root.mainloop()
