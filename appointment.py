@@ -34,71 +34,71 @@ class Application:
         self.heading.place(x=15, y=10)
 
         # enter_details
-        self.age = Label(self.left, text="Please Enter the following details to book an appointment:",
-                         font=('Times 12'), fg='black', bg='lavender')
-        self.age.place(x=0, y=70)
+        self.age = Label(self.left, text="***Please Enter the following details to book an appointment***",
+                         font=('Helvetica 10 bold'), fg='black', bg='lavender')
+        self.age.place(x=185, y=60)
 
         # name
         self.name = Label(self.left, text="Name", font=('arial 15 bold'), fg='white', bg='black')
-        self.name.place(x=0, y=100)
+        self.name.place(x=150, y=100)
 
         # age
         self.age = Label(self.left, text="Age", font=('arial 15 bold'), fg='white', bg='black')
-        self.age.place(x=0, y=140)
+        self.age.place(x=150, y=140)
 
         # gender
         self.gender = Label(self.left, text="Gender", font=('arial 15 bold'), fg='white', bg='black')
-        self.gender.place(x=0, y=180)
+        self.gender.place(x=150, y=180)
 
         # location
         self.location = Label(self.left, text="City/Location", font=('arial 15 bold'), fg='white', bg='black')
-        self.location.place(x=0, y=220)
+        self.location.place(x=150, y=220)
 
         # appointment time
         self.time = Label(self.left, text="Appointment Time", font=('arial 15 bold'), fg='white', bg='black')
-        self.time.place(x=0, y=260)
+        self.time.place(x=150, y=260)
 
         # phone
         self.phone = Label(self.left, text="Phone Number", font=('arial 15 bold'), fg='white', bg='black')
-        self.phone.place(x=0, y=300)
+        self.phone.place(x=150, y=300)
 
         # course
         self.course = Label(self.left, text="Course Interested:", font=('arial 15 bold'), fg='white', bg='black')
-        self.course.place(x=0, y=340)
+        self.course.place(x=150, y=340)
 
         # marks
         self.marks = Label(self.left, text="Marks +2:", font=('arial 15 bold'), fg='white', bg='black')
-        self.marks.place(x=0, y=380)
+        self.marks.place(x=150, y=380)
 
         # Entries for all labels============================================================
         self.name_ent = Entry(self.left, width=30)
-        self.name_ent.place(x=250, y=100)
+        self.name_ent.place(x=450, y=106)
 
         self.age_ent = Entry(self.left, width=30)
-        self.age_ent.place(x=250, y=140)
+        self.age_ent.place(x=450, y=146)
 
         self.gender_ent = Entry(self.left, width=30)
-        self.gender_ent.place(x=250, y=180)
+        self.gender_ent.place(x=450, y=186)
 
         self.location_ent = Entry(self.left, width=30)
-        self.location_ent.place(x=250, y=220)
+        self.location_ent.place(x=450, y=226)
 
         self.time_ent = Entry(self.left, width=30)
-        self.time_ent.place(x=250, y=260)
+        self.time_ent.place(x=450, y=266)
 
         self.phone_ent = Entry(self.left, width=30)
-        self.phone_ent.place(x=250, y=300)
+        self.phone_ent.place(x=450, y=306)
 
         self.course_ent = Entry(self.left, width=30)
-        self.course_ent.place(x=250, y=340)
+        self.course_ent.place(x=450, y=346)
 
         self.marks_ent = Entry(self.left, width=30)
-        self.marks_ent.place(x=250, y=380)
+        self.marks_ent.place(x=450, y=386)
 
         # button to perform a command
-        self.submit = Button(self.left, text="Add Appointment", width=20, height=2, bg='steelblue',
+        self.submit = Button(self.left, text="Add Appointment", font="Helvetica 10 bold", bd="4", width=20, height=2, bg='#00B2EE',
                              command=self.add_appointment)
-        self.submit.place(x=340, y=500)
+        self.submit.place(x=320, y=450)
 
         ######
         # getting the number of appointments fixed to view in the log

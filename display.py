@@ -37,22 +37,22 @@ class Application:
         self.x = 0
 
         # heading
-        self.heading = Label(master, text="Admission Appointments", font=('Helvetica 40 bold'), fg='green')
-        self.heading.place(x=350, y=0)
+        self.heading = Label(master, text="Admission Appointments", font=('Helvetica 40 bold'), bg="brown1", fg='black')
+        self.heading.place(x=350, y=10)
 
         # button to change patients
-        self.change = Button(master, text="Next Student", width=25, height=2, bg='steelblue', command=self.func)
-        self.change.place(x=500, y=600)
+        self.change = Button(master, text="Next Student", font="Helvetica 10 bold", width=25, height=2, bd="4", bg='#00B2EE', command=self.func)
+        self.change.place(x=550, y=500)
 
         # empty text labels to later config
-        self.n = Label(master, text="", font=('arial 20 bold'))
-        self.n.place(x=500, y=100)
+        self.n = Label(master, text="", font=('arial 80 bold'))
+        self.n.place(x=30, y=100)
 
-        self.stuname = Label(master, text="", font=('arial 40 bold'))
-        self.stuname.place(x=300, y=200)
+        self.stuname = Label(master, text="", font=('arial 80 bold'))
+        self.stuname.place(x=400, y=100)
 
-        self.co = Label(master, text="", font=('arial 60 bold'))
-        self.co.place(x=300, y=300)
+        self.co = Label(master, text="", font=('arial 40 bold'))
+        self.co.place(x=480, y=300)
 
     # function to speak the text and update the text
     def func(self):
