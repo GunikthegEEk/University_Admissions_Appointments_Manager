@@ -40,7 +40,7 @@ def Login():
 #Creating Widgets for Use
 Uname = Label(root,text='Enter your Username: ', font="Helvetica 16 bold")
 Pass = Label(root,text='Enter your Password: ', font="Helvetica 16 bold")
-SubmitL = Button(root,text='Login', height="2",width="10", bd="4", highlightcolor="blue", command=Login)
+SubmitL = Button(root,text='Login', font="Helvetica 10 bold", height="2",width="10", bd="4", bg="#00B2EE", command=Login)
 Head= Label(root, text="UNIVERSITY ADMISSION APPOINTMENT MANAGER", font="Helvetica 40 bold",  fg='black', bg='brown1')
 star= Label(root, text="*********************", font="Helvetica 26 bold",  fg='black')
 login= Label(root, text="LOGIN", font="Helvetica 25 bold",  fg='#ff9933', bg='black')

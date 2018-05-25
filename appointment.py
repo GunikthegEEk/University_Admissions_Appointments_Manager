@@ -100,6 +100,10 @@ class Application:
                              command=self.add_appointment)
         self.submit.place(x=320, y=450)
 
+        # button to back on main menu
+        self.back = Button(self.left, text="Back to Main Menu", font="Helvetica 10 bold", bd="4", width=20, height=2, bg='#32cd32', command= self.btmm)
+        self.back.place(x=600, y=610)
+
         ######
         # getting the number of appointments fixed to view in the log
         sql2 = "SELECT ID FROM appointments"
@@ -152,7 +156,10 @@ class Application:
                 tkinter.messagebox.showinfo("Success", "Appointment for " + str(self.val1) + " has been created")
 
                 self.box.insert(END, ' \n Appointment fixed for ' + str(self.val1) + ' at ' + str(self.val5))
-
+                # back to main menu
+    # back button
+    def btmm(self):
+        root.destroy()
 
 
 

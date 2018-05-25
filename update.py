@@ -12,6 +12,7 @@ conn = connect(host='localhost',
 c = conn.cursor()
 
 class Application:
+
     def __init__(self, master):
         self.master = master
         #frame_full
@@ -33,6 +34,13 @@ class Application:
         self.search = Button(master, text="Search", font='Helvetica 10 bold', width=12, height=1, bd="2", bg='#00B2EE',command=self.search_db )
         self.search.place(x=550, y=140)
 
+        # back button
+        self.back = Button(master, text="Back to Main Menu", font="Helvetica 10 bold", width=20, height=2, bd="4", bg='#32cd32', command= self.btmm)
+        self.back.place(x=1100, y=650)
+
+    # back to main menu
+    def btmm(self):
+        root.destroy()
     # function to search
     def search_db(self):
         self.input = self.namenet.get()
@@ -124,6 +132,8 @@ class Application:
             self.delete = Button(self.master, text="Delete", font="Helvetica 10 bold", width=20, height=2, bd='4', bg='red', command=self.delete_db)
             self.delete.place(x=380, y=600)
 
+
+
     def update_db(self):
         # declaring the variables to update
         self.var1 = self.ent1.get()  # updated name
@@ -157,10 +167,13 @@ class Application:
         self.ent7.destroy()
         self.ent8.destroy()
 
+
+
+
 # creating the object
 root = Tk()
 root.title("Update Appointments - UAAM")
 b = Application(root)
-root.geometry("1200x720+0+0")
+root.geometry("1366x768+0+0")
 root.resizable(False, False)
 root.mainloop()

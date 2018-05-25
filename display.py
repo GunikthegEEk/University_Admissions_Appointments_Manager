@@ -44,6 +44,10 @@ class Application:
         self.change = Button(master, text="Next Student", font="Helvetica 10 bold", width=25, height=2, bd="4", bg='#00B2EE', command=self.func)
         self.change.place(x=550, y=500)
 
+        # button to back on main menu
+        self.back = Button(master, text="Back to Main Menu", font="Helvetica 10 bold", width=20, height=2, bd="4", bg='#32cd32', command=self.btmm)
+        self.back.place(x=1100, y=650)
+
         # empty text labels to later config
         self.n = Label(master, text="", font=('arial 80 bold'))
         self.n.place(x=30, y=100)
@@ -53,6 +57,10 @@ class Application:
 
         self.co = Label(master, text="", font=('arial 40 bold'))
         self.co.place(x=480, y=300)
+
+    # back to main menu
+    def btmm(self):
+       root.destroy()
 
     # function to speak the text and update the text
     def func(self):
